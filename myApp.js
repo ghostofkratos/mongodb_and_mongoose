@@ -1,5 +1,7 @@
 require('dotenv').config();
+const mongoose = require("mongoose");
 
+const uri = "mongodb+srv://psycho_kratos:xvsXbjMKHLSQ5Saw@mycluster.4dgofgv.mongodb.net/?retryWrites=true&w=majority&appName=MyCluster";
 
 let Person;
 
@@ -50,6 +52,8 @@ const queryChain = (done) => {
 
   done(null /*, data*/);
 };
+
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
