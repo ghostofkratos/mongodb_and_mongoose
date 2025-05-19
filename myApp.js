@@ -1,6 +1,7 @@
 require('dotenv').config();
 const mongoose = require("mongoose");
 
+const uri = "mongodb+srv://psycho_kratos:xvsXbjMKHLSQ5Saw@mycluster.4dgofgv.mongodb.net/?retryWrites=true&w=majority&appName=MyCluster";
 
 let Person;
 
