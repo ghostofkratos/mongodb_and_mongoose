@@ -1,4 +1,5 @@
 require('dotenv').config();
+const mongoose = require("mongoose");
 
 
 let Person;
@@ -50,6 +51,8 @@ const queryChain = (done) => {
 
   done(null /*, data*/);
 };
+
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
